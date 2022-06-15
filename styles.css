@@ -1,0 +1,425 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+/*CSS reset*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/*Kleurvariabelen*/
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --text-black-standard: #0C0C0C;
+    --floating-light-purple: #F2F0FF;
+    --background-light-grey: #F3F6F9;
+    --tiles-grey: #7A7A7A;
+
+
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border tijdelijk om te zien wat we doen*/
+    /*border: 1px solid yellow;*/
+    background-color: white;
+}
+
+.inner-container {
+    /*als flex item*/
+    flex-basis: 1400px;
+    /*1200 - 1400*/
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0 20px;
+
+    /*eerste waarde boven onder 2e waarde l/r*/
+
+    /*als container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #ED4385;*/
+    /*border: 5px dotted blue;*/
+}
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+button {
+    background-color: var(--pink);
+    border: none;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+}
+
+.outer-container-gray {
+    background-color: var(--background-light-grey);
+
+}
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+
+a {
+    color: white;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+h1 {
+    margin: 20px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+nav {
+    /*background-color: white;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+ul {
+    display: flex;
+    /*background-color: green;*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 30%;
+}
+
+li {
+    list-style: none;
+}
+
+.header-content {
+    margin: 50px 0;
+    margin-bottom: 0px;
+    /*//dit zorgt ervoor dat het element meegroeid en niet te klein wordt voor de tekst*/
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%
+    /*background-color: yellow;*/
+}
+
+#outer-container-header {
+    background: linear-gradient(to left, #4845E4, #5722CD);
+}
+
+
+#header {
+    margin: 5px;
+    font-size: 20px;
+}
+
+#header-button {
+    margin: 20px;
+    margin-bottom: 85px;
+
+}
+
+#styling-wave-header {
+    width: 6%
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    color: var(--purple);
+}
+
+#intro {
+    margin: 6px;
+
+}
+
+#we-use {
+    margin-top: 30px;
+}
+
+
+#we-see {
+    margin-top: 30px;
+}
+
+#have-a {
+    margin-top: 80px;
+    color: var(--text-black-standard);
+    font-size: 16px;
+}
+
+
+/* --------------- 4.3 Work ------------------- */
+.inner-container-work {
+    margin: 40px;
+}
+
+.inner-container-top {
+    margin-top: 80px;
+}
+
+.inner-container-bottom {
+    margin-bottom: 130px;
+}
+
+
+.img-work {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.30);
+}
+
+.foto-rechts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: orange;*/
+    width: 100%;
+
+}
+
+.foto-links {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    /*background-color: brown;*/
+    width: 100%;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+
+.work-header {
+    margin: 40px;
+    margin-bottom: 90px;
+}
+
+.work-text {
+    margin: 40px;
+    color: black;
+}
+
+#is-an-industry {
+    margin: 40px;
+}
+
+
+/* --------------- 4.4 services ------------------- */
+h4 {
+    margin-bottom: 20px;;
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--purple);
+}
+
+
+.ser-foto {
+    flex-basis: 2px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding-right: 270px;
+
+}
+
+.ser-text {
+    /*border: 2px solid;*/
+    /*border-color: orange;*/
+    flex-basis: 800px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.all-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*background-color: brown;*/
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 40px;
+    padding: 50px;
+
+}
+
+.service-foto {
+    flex-basis: 50px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    /*border: 2px solid;*/
+    /*border-color: yellow;*/
+
+}
+
+.service {
+    flex-basis: 350px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    padding: 25px;
+
+
+}
+
+/* --------------- 4.5 form ------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: brown;*/
+    width: 50%;
+}
+
+.outer-header-form {
+    background-color: var(--purple);
+}
+
+.formulier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: green;*/
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.label {
+    margin-top: 25px;
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /*background-color: brown;*/
+    color: white;
+}
+
+#name-field {
+    width: 100%;
+    padding: 10px;
+}
+
+#email-field {
+    width: 100%;
+    padding: 10px;
+}
+
+#message-field {
+    width: 100%;
+    padding: 10px;
+}
+
+#form-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: yellow;*/
+    padding: 20px;
+    width: 100%;
+}
+
+#button {
+    padding-left: 55px;
+    padding-right: 50px
+}
+
+/* --------------- 4.6 footer ------------------- */
+#footer {
+    padding: 15px;
+    color: white;
+}
+
+#outer-container-footer {
+    background-color: var(--text-black-standard);
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+/*vraag: 1 hoe kan ik een tweede "style decorations" zetten op een href? zie de  "Click here" in intro. Intro is nu nog onderstreept*/
